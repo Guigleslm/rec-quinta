@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Calculadora Simples</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-item>
+    <ion-label position="floating">Número 1</ion-label>
+    <ion-input type="number" [(ngModel)]="numero1"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Número 2</ion-label>
+    <ion-input type="number" [(ngModel)]="numero2"></ion-input>
+  </ion-item>
+
+  <ion-row>
+    <ion-col size="3">
+      <ion-button expand="full" (click)="adicao()">+</ion-button>
+    </ion-col>
+    <ion-col size="3">
+      <ion-button expand="full" (click)="subtracao()">-</ion-button>
+    </ion-col>
+    <ion-col size="3">
+      <ion-button expand="full" (click)="multiplicacao()">*</ion-button>
+    </ion-col>
+    <ion-col size="3">
+      <ion-button expand="full" (click)="divisao()">/</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-button expand="full" (click)="calculate()">=</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-item *ngIf="resultado !== undefined">
+    <ion-label>Resultado:</ion-label>
+    <ion-label>{{ resultado }}</ion-label>
+  </ion-item>
+</ion-content>
