@@ -1,7 +1,0 @@
-{
-  "name": "reccalculator",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
